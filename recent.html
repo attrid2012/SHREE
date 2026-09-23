@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Recent Searches - SHREE</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+            SHREE
+        </div>
+
+
+        <button
+            class="new-chat-button"
+            onclick="location.href='dashboard.html'"
+        >
+            + New Chat
+        </button>
+
+
+        <nav class="side-navigation">
+
+            <a href="dashboard.html">
+                Ask SHREE
+            </a>
+
+            <a href="recent.html" class="active">
+                Recent Searches
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+        </nav>
+
+
+        <button
+            class="logout-button"
+            onclick="logoutUser()"
+        >
+            Logout
+        </button>
+
+    </aside>
+
+
+
+    <main class="main-area">
+
+        <header class="topbar">
+
+            <div>
+
+                <h2>Recent Searches</h2>
+
+                <p>
+                    Your questions on this browser
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <section class="recent-container">
+
+            <div id="recentList"></div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="auth.js"></script>
+<script src="recent.js"></script>
+
+</body>
+</html>
