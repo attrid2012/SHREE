@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>SHREE AI</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+            SHREE
+        </div>
+
+
+        <button
+            class="new-chat-button"
+            onclick="newChat()"
+        >
+            + New Chat
+        </button>
+
+
+        <nav class="side-navigation">
+
+            <a href="dashboard.html" class="active">
+                <span>Ask SHREE</span>
+            </a>
+
+            <a href="recent.html">
+                <span>Recent Searches</span>
+            </a>
+
+            <a href="profile.html">
+                <span>Profile</span>
+            </a>
+
+        </nav>
+
+
+        <button
+            class="logout-button"
+            onclick="logoutUser()"
+        >
+            Logout
+        </button>
+
+    </aside>
+
+
+
+    <!-- MAIN AREA -->
+
+    <main class="main-area">
+
+
+        <header class="topbar">
+
+            <div>
+
+                <h2>SHREE</h2>
+
+                <p>
+                    AI Assistant
+                </p>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- CHAT -->
+
+        <section
+            id="chatMessages"
+            class="chat-messages"
+        >
+
+            <div class="welcome-screen">
+
+                <div class="welcome-logo">
+                    S
+                </div>
+
+                <h1>
+                    How can I help you?
+                </h1>
+
+                <p>
+                    Ask SHREE anything.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- INPUT -->
+
+        <div class="composer-area">
+
+            <div class="composer">
+
+
+                <!-- ATTACH -->
+
+                <button
+                    class="tool-button"
+                    onclick="document.getElementById('fileInput').click()"
+                    title="Attach file"
+                >
+                    +
+                </button>
+
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    hidden
+                    onchange="fileSelected()"
+                >
+
+
+                <!-- TEXT -->
+
+                <textarea
+                    id="questionInput"
+                    placeholder="Write your question..."
+                    rows="1"
+                ></textarea>
+
+
+                <!-- SPEAK -->
+
+                <button
+                    class="tool-button"
+                    onclick="startSpeaking()"
+                    title="Speak"
+                >
+                    MIC
+                </button>
+
+
+                <!-- SEND -->
+
+                <button
+                    class="send-button"
+                    onclick="sendQuestion()"
+                >
+                    Send
+                </button>
+
+            </div>
+
+
+            <p class="composer-note">
+                SHREE can make mistakes. Check important information.
+            </p>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="auth.js"></script>
+<script src="dashboard.js"></script>
+
+</body>
+</html>
